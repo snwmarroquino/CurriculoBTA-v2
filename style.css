@@ -1,0 +1,226 @@
+
+
+/* Variáveis do Sistema de Cores e Estética */
+:root {
+    --bg-main: #0d0f12;
+    --text-primary: #f0f2f5;
+    --text-secondary: #8b949e;
+    --accent-blue: #1f6feb;
+    --accent-glow: rgba(31, 111, 235, 0.1);
+    --border-color: #21262d;
+}
+
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 60px 20px;
+}
+
+/* Container de leitura fluida */
+.resume-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header Minimalista */
+.profile-header {
+    margin-bottom: 40px;
+}
+
+.header-main h1 {
+    font-family: 'Space Grotesk', sans-serif; /* Força a fonte imponente no seu nome */
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.badge-title {
+    display: inline-block;
+    color: var(--accent-blue);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+/* Seções Baseadas em Linhas Horizontais */
+.resume-section {
+    margin-bottom: 45px;
+}
+
+.section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    color: var(--accent-blue); /* Letras e barras em azul */
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* Isolador do Número das Seções */
+.section-num {
+    color: #ffca28; /* Amarelo limpo e cirúrgico nos números */
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+/* Conteúdos e Listas */
+.section-content {
+    padding-left: 4px;
+}
+
+.section-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.highlight {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.list-item {
+    margin-bottom: 25px;
+    padding-left: 4px;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+}
+
+.list-header h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.list-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Lista de Projetos */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-row {
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 15px;
+}
+
+.project-row:last-child {
+    border-bottom: none;
+}
+
+/* Links Dinâmicos */
+.project-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.project-link:hover {
+    color: #58a6ff;
+    transform: translateX(4px); /* Efeito técnico ao passar o mouse */
+}
+
+/* Grades e Elementos Auxiliares */
+.grid-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.tech-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent-blue);
+    margin-left: 8px;
+}
+
+.institution {
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.card-details {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Listas de Skills sem caixas */
+.skills-list-clean {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skill-row-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    list-style-type: none;
+    padding-left: 12px;
+    position: relative;
+}
+
+.skill-row-item::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+}
+
+/* Ajuste de Tela para Celular */
+@media (max-width: 768px) {
+    .grid-two-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.intro-text {
+    color: var(--text-primary) !important;
+    font-size: 0.98rem;
+    font-weight: 500;
+}
